@@ -1,15 +1,15 @@
 #!usr/bin/env node
 /* eslint-disable no-unused-vars */
 
-// HOJ - An online judge.
-// Copyright (c) 2019 Alex Cui.
+// HOJ Test Case Server.
+// Copyright (c) 2019 SparrowHe.
 // This project is released with AGPLv3.0
 
 'use strict';
 
 const express = require('express');
 const logger = require('./logger.js');
-const config = require('../config.js');
+const config = require('./config.js');
 const router = require('./route.js');
 
 
@@ -27,6 +27,10 @@ function printWelcomeInfo() {
 async function run() {
     printWelcomeInfo();
 
+    global.__hoj = {
+        session: []
+    };
+
     const app = express();
 
     app.use('/', router);
@@ -37,8 +41,8 @@ async function run() {
     });
     */
 
-    app.listen(config.hoj.port, config.hoj.host, () => {
-        logger.log(`HOJ is listening on ${config.hoj.host}:${config.hoj.port}.`);
+    app.listen(config.hoj_testcase.port, config.hoj_testcase.host, () => {
+        logger.log(`HOJ is listening on ${config.hoj_testcase.host}:${config.hoj_testcase.port}`);
     });
 }
 
