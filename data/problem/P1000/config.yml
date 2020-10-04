@@ -1,0 +1,9 @@
+type: oi
+problem: aplusb
+spj: false
+test_count: 1
+substacks:
+  -
+    test_count: 1
+    time_limit: 1000
+    memory_limit: 128000

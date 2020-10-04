@@ -1,0 +1,14 @@
+{
+  "name": "hoj-testcase-server",
+  "version": "1.0.0",
+  "description": "A testcase server for HOJ",
+  "main": "src/index.js",
+  "repository": "https://github.com/hydrogen-oj/hoj-testcase-server",
+  "author": "SparrowHe <dd_eur@outlook.com>",
+  "license": "AGPL",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "js-yaml": "^3.14.0"
+  }
+}
